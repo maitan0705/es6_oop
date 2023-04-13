@@ -91,9 +91,12 @@ export function Validation() {
     } else if (value.length < min || value.length > max) {
       document.getElementById(
         idError
-      ).innerHTML = `${name} Từ ${min} Đến ${max} ký tự bao gồm số A012`;
+      ).innerHTML = `${name} Từ ${min} Đến ${max} Ký Tự`;
       return false;
     }
+    document.getElementById(
+      idIcon
+    ).innerHTML = `<i class="fa fa-check align-items-center"></i>`;
     document.getElementById(idError).innerHTML = "";
     return true;
   };

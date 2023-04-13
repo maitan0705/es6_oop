@@ -64,7 +64,7 @@
         <span class="text-success m-auto px-2" id="error-tbGioLam"></span>
       </div>
         </div>
-        <span class="sp-thongbao mb-2" id="tbHoaDon"></span>
+        <span class="sp-thongbao" id="tbHoaDon"></span>
     </div>
 
     <div class="form-group m-0">
@@ -73,7 +73,7 @@
         <span class="text-success m-auto px-2" id="error-tbGioLam"></span>
       </div>
         </div>
-        <span class="sp-thongbao mb-2" id="tbDanhGia"></span>
+        <span class="sp-thongbao" id="tbDanhGia"></span>
     </div>
     `;
         break;

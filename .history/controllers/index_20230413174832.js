@@ -186,9 +186,6 @@ document.querySelector('#btnCapNhat').onclick = () => {
             let { id, value } = input;
             customer[id] = value;
           }
-          let valida = true;
-        valida = valid(customer)& check.checkText(customer.tenCongTy, 'tbTenCongTy', 'Tên Công ty')& check.checkNumber1(customer.hoaDon, 'tbHoaDon', 'Hóa đơn', 500000)&check.checkText(customer.danhGia, 'tbDanhGia', 'Đánh Giá')
-        if(!valida) return ;
           listPerson.update(customer);
           listPerson.renderTable("#tableDanhSach");
           listPerson.save();

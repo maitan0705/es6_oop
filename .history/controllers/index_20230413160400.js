@@ -37,7 +37,7 @@ listPerson.renderTable("#tableDanhSach");
 
 function valid(params) {
   var valid = true;
-  valid = check.checkLength(params.ma, 'tbMa','Mã trên', 4 , 6)
+  valid = check.checkLength(params.ma, 'tbMa','Mã', 4, 6, "error-tbMa")
   &check.checkName(params.hoTen, 'tbHoTen', 'Họ Tên', "error-tbHoTen") 
   &check.checkEmail(params.email, 'tbEmail',"Email",'error-tbEmail')
   &check.checkRong(params.diaChi,'tbDiaChi',"Địa chỉ")
@@ -73,7 +73,7 @@ document.querySelector("#btnThemNV").onclick = () => {
           employee[id] = value;
         }
         let valida = true;
-        valida = valid(employee)& check.checkNumber1(employee.ngayLam,'tbNgay','Số ngày làm',1)& check.checkNumber1(employee.luong, 'tbLuong', 'Lương', 200)
+        valida = valid(employee)& check.
         if(!valida) return ;
         listPerson.themDoiTuong(employee);
         listPerson.renderTable("#tableDanhSach");
@@ -88,16 +88,15 @@ document.querySelector("#btnThemNV").onclick = () => {
           let { id, value } = input;
           customer[id] = value;
         }
-        let valida = true;
-        valida = valid(customer)& check.checkText(customer.tenCongTy, 'tbTenCongTy', 'Tên Công ty')& check.checkNumber1(customer.hoaDon, 'tbHoaDon', 'Hóa đơn', 500000)&check.checkText(customer.danhGia, 'tbDanhGia', 'Đánh Giá')
-        if(!valida) return ;
+        // let valida = true;
+        // valida = valid(customer)&
+        // if(!valida) return ;
         listPerson.themDoiTuong(customer);
         listPerson.renderTable("#tableDanhSach");
         listPerson.save();
       }
       break;
   }
-  document.querySelector('#myForm').reset();
 };
 window.xoaDoiTuong = function (ma) {
   listPerson.deleteDT(ma);
@@ -154,9 +153,6 @@ document.querySelector('#btnCapNhat').onclick = () => {
             let { id, value } = input;
             student[id] = value;
           }
-          let valida = true;
-        valida = valid(student)& check.checkNumber(student.toan, 'tbToan', 'Điểm', 0, 10)& check.checkNumber(student.ly, 'tbLy', 'Điểm', 0, 10)& check.checkNumber(student.hoa, 'tbHoa', 'Điểm', 0, 10)
-        if(!valida) return ;
           listPerson.update(student);
           listPerson.renderTable("#tableDanhSach");
           listPerson.save();
@@ -170,9 +166,6 @@ document.querySelector('#btnCapNhat').onclick = () => {
             let { id, value } = input;
             employee[id] = value;
           }
-          let valida = true;
-          valida = valid(employee)& check.checkNumber1(employee.ngayLam,'tbNgay','Số ngày làm',1)& check.checkNumber1(employee.luong, 'tbLuong', 'Lương', 200)
-          if(!valida) return ;
           listPerson.update(employee);
           listPerson.renderTable("#tableDanhSach");
           listPerson.save();
@@ -186,9 +179,6 @@ document.querySelector('#btnCapNhat').onclick = () => {
             let { id, value } = input;
             customer[id] = value;
           }
-          let valida = true;
-        valida = valid(customer)& check.checkText(customer.tenCongTy, 'tbTenCongTy', 'Tên Công ty')& check.checkNumber1(customer.hoaDon, 'tbHoaDon', 'Hóa đơn', 500000)&check.checkText(customer.danhGia, 'tbDanhGia', 'Đánh Giá')
-        if(!valida) return ;
           listPerson.update(customer);
           listPerson.renderTable("#tableDanhSach");
           listPerson.save();

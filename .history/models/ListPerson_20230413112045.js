@@ -22,8 +22,8 @@ export class ListPerson {
         case "customer":
           var person = new Customer();
           Object.assign(person, user);
-          string = `Tên Công Ty: ${person.tenCongTy} <br/>
-          Hóa đơn: ${person.hoaDon} <br/>
+          string = `Tên Công Ty: ${person.tenCongTy} <br>
+          Hóa đơn: ${person.hoaDon}
           Đánh giá: ${person.danhGia}`;      
           break;
       }

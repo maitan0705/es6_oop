@@ -49,22 +49,22 @@
         break;
 
       case "customer":
-        htmlString =`<div class="form-group m-0">
+        htmlString =`<div class="form-group ">
         <div class="input-group ">
         <input type="text" id="tenCongTy" class="form-control input-sm" placeholder="Tên Công ty">
         <span class="text-success m-auto px-2" id="error-tbGioLam"></span>
       </div>
         </div>
-        <span class="sp-thongbao mb-2" id="tbTenCongTy"></span>
+        <span class="sp-thongbao m-2" id="tbTenCongTy"></span>
     </div>
 
-    <div class="form-group m-0">
-        <div class="input-group ">
+    <div class="form-group">
+        <div class="input-group m-0">
         <input type="text"  id="hoaDon" class="form-control input-sm" placeholder="Trị giá hóa đơn">
         <span class="text-success m-auto px-2" id="error-tbGioLam"></span>
       </div>
         </div>
-        <span class="sp-thongbao mb-2" id="tbHoaDon"></span>
+        <span class="sp-thongbao" id="tbHoaDon"></span>
     </div>
 
     <div class="form-group m-0">
@@ -73,7 +73,7 @@
         <span class="text-success m-auto px-2" id="error-tbGioLam"></span>
       </div>
         </div>
-        <span class="sp-thongbao mb-2" id="tbDanhGia"></span>
+        <span class="sp-thongbao" id="tbDanhGia"></span>
     </div>
     `;
         break;

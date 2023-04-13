@@ -51,7 +51,7 @@ export function Validation() {
     document.getElementById(idError).innerHTML = `${name} Phải Là Số`;
     return false;
   };
-  this.checkText = function (value, idError, name) {
+  this.checkText = function (value, idError, name, min, max,) {
     var regexLetter = /^[A-Z a-z]+$/;
     if (value.trim() === '') {
       document.getElementById(idError).innerHTML = `Vui lòng nhập ${name}!`;
@@ -61,7 +61,7 @@ export function Validation() {
       document.getElementById(idError).innerHTML = "";
       return true;
     }
-    document.getElementById(idError).innerHTML = `${name} Phải Là Ký tự`;
+    document.getElementById(idError).innerHTML = `${name} Phải Là Số`;
     return false;
   };
   this.checkNumber1 = function (value, idError, name, min,) {
@@ -91,7 +91,7 @@ export function Validation() {
     } else if (value.length < min || value.length > max) {
       document.getElementById(
         idError
-      ).innerHTML = `${name} Từ ${min} Đến ${max} ký tự bao gồm số A012`;
+      ).innerHTML = `${name} Từ ${min} Đến ${max} Ký Tự`;
       return false;
     }
     document.getElementById(idError).innerHTML = "";

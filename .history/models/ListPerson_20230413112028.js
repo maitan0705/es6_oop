@@ -22,9 +22,9 @@ export class ListPerson {
         case "customer":
           var person = new Customer();
           Object.assign(person, user);
-          string = `Tên Công Ty: ${person.tenCongTy} <br/>
-          Hóa đơn: ${person.hoaDon} <br/>
-          Đánh giá: ${person.danhGia}`;      
+          string = `Tên Công Ty: ${person.tenCongTy} 
+          --Hóa đơn: ${person.hoaDon}
+          --Đánh giá: ${person.danhGia}`;      
           break;
       }
 
